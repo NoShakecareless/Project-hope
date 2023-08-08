@@ -1,15 +1,15 @@
 name = input("What's your name? ")
 
-match name:
+
+"""
+"match name:
     case "Harry" | "Hermione" | "Ron":
         print("Gryffindor")
     case "Draco":
         print("Slytherin")
     case _:
-        print("who?")
+        print("who?")""
 
-
-"""
 if name == "Harry" or name == "Hermione" or name == "Ron":
     print("Gryffindor")
 elif name == "Draco":
