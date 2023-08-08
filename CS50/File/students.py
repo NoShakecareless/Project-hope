@@ -17,4 +17,4 @@ def get_name(stu):
 
 # 此时不能给这么写sorted(students)，因为students是字典不是单纯的句子, 除非添加sorted参数key
 for student in sorted(students, key=get_name, reverse=True):
-    print(f"{student['name']} is in {student['house']}")
+    print(f"{student['name']} is from {student['house']}")
