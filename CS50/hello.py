@@ -9,3 +9,4 @@ def hello(to="world"):
 
 if __name__ == "__main__":
     main()
+    print(2**10)
