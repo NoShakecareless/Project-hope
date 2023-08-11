@@ -6,9 +6,18 @@ class Student:
         self.name = name
         self.house = house
 
+    # student = Student.get()  print(student) -> xxx from xxx
     def __str__(self):
         return f"{self.name} from {self.house}"
 
+    @classmethod
+    def get(cls):
+        name = input("Name: ")
+        house = input("House: ")
+        return cls(name, house)
+
+
+"""
     @property
     def name(self):
         return self._name
@@ -34,7 +43,6 @@ class Student:
         self._house = house
 
 
-'''
 raise: raise ValueError
 '''
 
@@ -50,11 +58,15 @@ def main():
 
 
 """
+
+
 def main():
-    student = get_student()
-    if student[0] == "Padma":
-        student[1] = "Ravenclaw"
-    print(f"{student[0]} from {student[1]}")
+    # student = get_student()
+    # if student[0] == "Padma":
+    #    student[1] = "Ravenclaw"
+    student = Student.get()
+    # print(f"{student[0]} from {student[1]}")
+    print(student)
 
 
 def get_student():
@@ -62,7 +74,6 @@ def get_student():
     house = input("House: ")
     return [name, house]
 # [name, house]表示返回一个列表，列表是可以改变的，元组不行！
-"""
 
 
 def get_student_class():
