@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""a test model"""
+
+__author__ = 'Mr.Zhou'
+
+
 def main():
     name = input("What's your name ?")
     print(hello(name))
