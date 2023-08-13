@@ -1,14 +1,13 @@
-# for _ in range(3):
-#    print("#")
-
-
 def main():
-    print_column(3)
+    height = int(input("Height: "))
+    pyramid(height)
 
 
-def print_column(height):
-    for _ in range(height):
-        print("#\n" * height, end="")
+def pyramid(height):
+    for i in range(height):
+        print("#" * (i + 1))
 
 
-main()
+if __name__ == "__main__":
+    main()
+    print("Breaking point pass")

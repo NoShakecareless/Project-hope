@@ -1,10 +1,12 @@
 # dictionary 字典 相对于列表（一维） 是多维的  key在第一行，值在第二行，如例：名字是key，院校是值value
 
 
-students = {"Hermione": "Gryffindor",
-            "Harry": "Gryffindor",
-            "Ron": "Gryffindor",
-            "Draco": "Slytherin"}
+students = {
+    "Hermione": "Gryffindor",
+    "Harry": "Gryffindor",
+    "Ron": "Gryffindor",
+    "Draco": "Slytherin",
+}
 # 只会打印出名字的key
 for student in students:
     print(student)
