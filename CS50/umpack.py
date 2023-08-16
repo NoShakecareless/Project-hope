@@ -4,9 +4,9 @@ import sys
 
 def parse_args():
     parse = argparse.ArgumentParser(description="Unpacking learn")
-    parse.add_argument('galleons', type=int, help='number of galleons')
-    parse.add_argument('sickles', type=int, help='number of sickles')
-    parse.add_argument('knuts', type=int, help='number of knuts')
+    parse.add_argument('-g', '--galleons', default=100, type=int, metavar=" ", required=True, help='number of galleons')
+    parse.add_argument('-s', '--sickles', default=50, type=int, metavar=" ", help='number of sickles')
+    parse.add_argument('-k', '--knuts', default=25, type=int, required=True, help='number of knuts')
     args = parse.parse_args()   # 解析参数对象获得解析对象
     return args
 
@@ -27,10 +27,5 @@ unpacking
 """
 
 if __name__ == "__main__":
-    # args = parse_args()
-    if len(sys.argv) < 4:
-        raise ValueError("Plz input 3 elem!")
-    galleons = int(sys.argv[1])
-    sickles = int(sys.argv[2])
-    knuts = int(sys.argv[3])
-    print(total(galleons, sickles, knuts), "Knuts")
+    args = parse_args()
+    print(total(args.galleons, args.sickles, args.knuts), "Knuts")
